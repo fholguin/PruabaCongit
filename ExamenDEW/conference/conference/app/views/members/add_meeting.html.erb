@@ -1,0 +1,8 @@
+<h2> Bienvenido <%= @member.name %> </h2>
+<h3> Puedes escoger la(s) conferencia(s) en la que quieres participar </h3>
+
+<%= simple_form_for(@member) do |f| %>
+	<%= f.association :meetings, :as => "check_boxes" %>
+	<%= f.button :submit %>
+
+	<% end %>

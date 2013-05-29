@@ -1,0 +1,25 @@
+<%= form_for(@conferencium) do |f| %>
+  <% if @conferencium.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@conferencium.errors.count, "error") %> prohibited this conferencium from being saved:</h2>
+
+      <ul>
+      <% @conferencium.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :tema %><br />
+    <%= f.text_field :tema %>
+  </div>
+  <div class="field">
+    <%= f.label :conferencista %><br />
+    <%= f.text_field :conferencista %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

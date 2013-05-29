@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  tema: MyString
+  conferencista: MyString
+
+two:
+  tema: MyString
+  conferencista: MyString

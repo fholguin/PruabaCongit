@@ -1,0 +1,2 @@
+class MeetingMembersController < ApplicationController
+end

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @member.name %>
+</p>
+
+<p>
+  <b>Surname:</b>
+  <%= @member.surname %>
+</p>
+
+<%= link_to 'Add_meeting', add_meeting_member_path(@member) %> |
+<%= link_to 'Edit', edit_member_path(@member) %> |
+<%= link_to 'Back', members_path %>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UPCchat</title>
+  <script src="http://js.pusher.com/2.0/pusher.min.js" type="text/javascript"></script>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+
+  <script type="text/javascript">
+    // Enable pusher logging - don't include this in production
+    Pusher.log = function(message) {
+      if (window.console && window.console.log) window.console.log(message);
+    };
+
+    var pusher = new Pusher('535610b304c5956ea159');
+    var channel = pusher.subscribe('chat2013');
+    channel.bind('message:create', function(data) {
+      
+    var message = "<li id='message_"+ data.id +"'>"
+    message += data.user+": "+data.message_text
+    message += "</li>"
+    
+    $("#chat_container").append(message);	
+    $("#message_content").val("");	
+
+
+    });
+  </script>
+
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>

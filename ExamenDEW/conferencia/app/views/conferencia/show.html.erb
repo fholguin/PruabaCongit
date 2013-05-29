@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Tema:</b>
+  <%= @conferencium.tema %>
+</p>
+
+<p>
+  <b>Conferencista:</b>
+  <%= @conferencium.conferencista %>
+</p>
+
+
+<%= link_to 'Edit', edit_conferencium_path(@conferencium) %> |
+<%= link_to 'Back', conferencia_path %>
